@@ -19,5 +19,8 @@ feign:
 service:
   paths:
     wallet:
-      url: wallet
+      url: http://localhost:8080
       method: /wallet/balance
+
+server:
+  port: 8081
