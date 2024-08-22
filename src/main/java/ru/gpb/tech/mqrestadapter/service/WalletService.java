@@ -36,8 +36,8 @@ public class WalletService {
      * Метод, вызываемый в случае недоступности сервиса баланса кошелька
      */
     private Optional<GetWalletBalanceResponse> getBalanceRecoverMethod(Exception ex) {
-        log.warn("Сервис баланса кошелька недоступен, будет использовано значение по-умолчанию", ex);
+        log.warn("Сервис баланса кошелька недоступен, будет возвращено пустое значение", ex);
 
-        return Optional.of(new GetWalletBalanceResponse());
+        return Optional.empty();
     }
 }
